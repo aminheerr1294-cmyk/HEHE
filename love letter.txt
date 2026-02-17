@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Special Letter 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffd6e8, #ffeef5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container { text-align: center; }
+
+    .bouquet {
+      font-size: 60px;
+      margin-bottom: 20px;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .envelope {
+      font-size: 90px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .envelope:hover { transform: scale(1.1); }
+
+    .letter {
+      display: none;
+      margin-top: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      width: 320px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      border: none;
+      resize: none;
+      outline: none;
+      font-size: 14px;
+    }
+
+    h2 { color: #d63384; }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="bouquet">💐💐💐</div>
+
+  <div class="envelope" onclick="openLetter()">📩</div>
+  <p>Click the envelope to open your letter ❤️</p>
+
+  <div class="letter" id="letter">
+    <h2>My Letter To You 💌</h2>
+    <textarea placeholder="Write your beautiful letter here..."></textarea>
+    <p style="color:#d63384;font-weight:bold;">With All My Love ❤️</p>
+  </div>
+</div>
+
+<script>
+  function openLetter() {
+    document.getElementById("letter").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
